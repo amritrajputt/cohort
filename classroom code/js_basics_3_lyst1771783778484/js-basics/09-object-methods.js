@@ -24,6 +24,8 @@ const priceList = [
 ];
 
 const priceObject = Object.fromEntries(priceList);
+console.log("price object ",priceObject);
+
 
 const displayCase = {
   artifact: "Obsidian",
@@ -31,45 +33,61 @@ const displayCase = {
   locked: true,
 };
 
+
+
 Object.freeze(displayCase);
 delete displayCase.locked;
 displayCase.newProp = "test";
+for(const [key,value] of Object.entries(displayCase)){
+  console.log(key, ":" , value);
+}
 console.log(displayCase);
 
-const catalogEntry = {
-  id: "ART-001",
-  description: "Ancient Crows",
-  verified: true,
-};
+// const catalogEntry = {
+//   id: "ART-001",
+//   description: "Ancient Crows",
+//   verified: true,
+// };
 
-Object.seal(catalogEntry);
+// Object.seal(catalogEntry);
 
-const secureArtificats = { name: "Ruby Pendant" };
+// const secureArtificats = { name: "Ruby Pendant" };
 
-Object.defineProperty(secureArtificats, "catelogId", {
-  value: "SEC-999",
+// Object.defineProperty(secureArtificats, "catelogId", {
+//   value: "SEC-999",
+//   writable: false,
+//   enumerable: false,
+//   configurable: false,
+// });
+
+// console.log(secureArtificats.catelogId);
+// secureArtificats.catelogId = "HACKED";
+// console.log(secureArtificats.catelogId);
+
+
+const person = { name: "Amrit" };
+
+Object.defineProperty(person, "age", {
+  value: 21,
   writable: false,
-  enumerable: false,
+  enumerable: true,
   configurable: false,
 });
 
-console.log(secureArtificats.catelogId);
-secureArtificats.catelogId = "HACKED";
-console.log(secureArtificats.catelogId);
+console.log(person.age)
+// for (const [key, value] of Object.entries(secureArtificats)) {
+//   console.log(`${key} : ${value}`);
+// }
 
-for (const [key, value] of Object.entries(secureArtificats)) {
-  console.log(`${key} : ${value}`);
-}
-
-const desc = Object.getOwnPropertyDescriptor(secureArtificats, "name");
-console.log(desc);
+// const desc = Object.getOwnPropertyDescriptor(secureArtificats, "name");
+// console.log(desc);
 
 
-// loop key points
-// 
-// 1. for()
-// 2. while
-// 3. do while
-// 4. for...in
-// 5. for...of
-// 6. map, foreach, filter, reduce
+// // loop key points
+// // 
+// // 1. for()
+// // 2. while
+// // 3. do while
+// // 4. for...in
+// // 5. for...of
+// // 6. map, foreach, filter, reduce

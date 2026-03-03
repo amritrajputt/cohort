@@ -17,7 +17,8 @@ console.log(Number.isNaN(notANumber));
 const fuelReading = "142.75 tons";
 const sectorCode = "0xA3";
 const countDown = "007";
-
+console.log(parseInt(fuelReading));
+console.log(parseInt(sectorCode));
 console.log(parseInt(countDown));
 console.log(parseInt("111", 2));
 

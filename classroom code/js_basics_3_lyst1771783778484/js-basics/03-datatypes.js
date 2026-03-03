@@ -23,6 +23,8 @@ console.log(
   typeof uniqueRuneId,
 );
 
+
+
 const heroStats = {
   name: "Deepak",
   level: 12,
@@ -33,6 +35,7 @@ console.log("Hero: ", heroStats, " | type: ", typeof heroStats);
 
 const inventory = ["Flame Sword", "Health Potion", "Shield"];
 console.log("Inventory: ", inventory, " | type: ", typeof inventory);
+console.log(Array.isArray(inventory));
 
 function castSpell() {
   return "Fireball";
@@ -79,10 +82,14 @@ const armorOriginal = {
 };
 
 const armorCopy = { ...armorOriginal };
+console.log(armorCopy);
+
 armorCopy.buff.fire = 90;
+console.log(armorCopy);
 
 const potionOriginal = { name: "Health", effects: { heal: 40, mana: 30 } }
 const potionCopy = structuredClone(potionOriginal)
 
-typeof null === "object"
-Array.isArray()
+console.log(typeof null == "object");
+ 
+// Array.isArray()

@@ -8,8 +8,12 @@ const hero = {
 };
 
 hero.weapon = "Fire";
+console.log(hero);
+
 
 delete hero.level;
+console.log(hero);
+
 
 const ranger = {
   name: "Lakshya the swift",

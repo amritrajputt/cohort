@@ -6,11 +6,25 @@ function brewPotion(ingredient, dose) {
 const mixElixir = function (ingredient) {
   return `Mixing elexir with ${ingredient} `;
 };
+const result = mixElixir("daal")
+console.log(result);
 
-// no own 'this', no `arguments` object
+// // no own 'this', no `arguments` object
 const distilEssence = (ingredient) => {
   return `Mixing elexir with ${ingredient} `;
 };
+const res= distilEssence("rice")
+console.log(res);
+
+// example:
+const receipe = {
+  ingredient : "rice",
+ distilEssence : () => {
+  return `Mixing elexir with ${this.ingredient} `;
+}
+}
+const res2= receipe.distilEssence("rice")
+console.log(res2);
 
 function oldBrewingLogs() {
   console.log("Type: ", typeof arguments);
@@ -19,7 +33,7 @@ function oldBrewingLogs() {
   console.log(argsArray);
 }
 
-// oldBrewingLogs("Sage", "Rosemary");
+oldBrewingLogs("Sage", "Rosemary");
 
 const arrowBrew = () => {
   try {
@@ -30,27 +44,27 @@ const arrowBrew = () => {
   }
 };
 
-// arrowBrew();
-// console.log("Program continue");
+arrowBrew();
+console.log("Program continue");
 
-let globalCount = 0;
+// let globalCount = 0;
 
-function brewAndCount(name) {
-  globalCount++;
-}
+// function brewAndCount(name) {
+//   globalCount++;
+// }
 
-// HOF
-function anotherFunctionForClass(brewAndCount) {
-  return function newBrew() {
-    //do something
-  };
-}
+// // HOF
+// function anotherFunctionForClass(brewAndCount) {
+//   return function newBrew() {
+//     //do something
+//   };
+// }
 
-//IIFE
-//
+// //IIFE
+// //
 
-//()()
-// (function () {})()(() => {})();
+// //()()
+// // (function () {})()(() => {})();
 
 const potionShop = (function () {
   let inventory = 0;
@@ -69,19 +83,19 @@ console.log(potionShop);
 console.log(potionShop.brew());
 console.log(potionShop.inventory);
 
-function something() {
-  let i = 7
-  const name = "hitesh"
-  return 5
-}
+// function something() {
+//   let i = 7
+//   const name = "hitesh"
+//   return 5
+// }
 
-function makeFunc() {
-  const name = "Mozilla";
-  function displayName() {
-    console.log(name);
-  }
-  return displayName;
-}
+// function makeFunc() {
+//   const name = "Mozilla";
+//   function displayName() {
+//     console.log(name);
+//   }
+//   return displayName;
+// }
 
-const myFunc = makeFunc();
-myFunc();
+// const myFunc = makeFunc();
+// myFunc();

@@ -6,6 +6,68 @@ const orders = [
   { dish: "Truffle Risotto", price: 18, spicy: false, qty: 1 },
 ];
 
+// ForEach method example
+
+// Q. Print each dish name with its quantity like:
+
+orders.forEach((item) => console.log(`${item.dish} - ${item.qty}`))
+
+// Q. Print only spicy dishes in uppercase.
+
+orders.forEach((item) => {
+  if (item.spicy === true) {
+    console.log("spicy dishes are: ",item.dish.toUpperCase())
+}
+})
+
+
+// map
+
+// Q. Create a new array that contains only dish names.
+const dishes = []
+orders.map((dish) => dishes.push(dish.dish))
+console.log(dishes);
+
+// Q. Create a new array where each element is the total price per order (price * qty).
+const totalPrice = []
+orders.map((item) => totalPrice.push(item.price*item.qty))
+console.log(totalPrice);
+
+
+// filter
+
+// Get all spicy dishes.
+
+orders.filter((item) => {
+  if(item.spicy === true) {
+    console.log(item.dish);
+    
+  }
+})
+
+// Get all orders where total cost (price * qty) is greater than 20.
+orders.map((item) => ((item.price*item.qty) > 20) ? console.log(item):"")
+
+
+//reduce
+
+//Calculate the total revenue of all orders.
+
+const total = orders.reduce((acc,item) => {
+  return acc += item.price*item.qty
+},0)
+console.log(total);
+
+// Count how many total items were ordered (sum of all qty).
+
+const totalQty = orders.reduce((acc,item) => {
+  return acc += item.qty
+},0)
+console.log(totalQty);
+
+
+//CLASSROOM CODE
+
 const myData = orders.forEach((order, index) => {
   console.log(`  #${index + 1} : ${order.qty}x ${order.dish}`);
 });
@@ -36,8 +98,10 @@ const grouped = orders.reduce(
 console.log(grouped);
 
 const ticketNumbers = [100, 25, 3, 42, 8];
-const sortedW = [...ticketNumbers].sort((a, b) => a - b);
-console.log(sortedW);
+const ascendingOrder = [...ticketNumbers].sort((a, b) => a - b);
+const descendingOrder = [...ticketNumbers].sort((a, b) => b - a);
+console.log(ascendingOrder);
+console.log(descendingOrder);
 
 const kitchenOrders = [
   { dish: "Pasta Carbonara", price: 14, spicy: false, qty: 2 },
@@ -48,7 +112,7 @@ const kitchenOrders = [
   { dish: "Ghost Pepper Soup", price: 15, spicy: true, qty: 1 },
 ];
 
-data | (v1=true, v2=false, v3=true)
+// data | (v1=true, v2=false, v3=true)
 
 const mildReport = kitchenOrders
   .filter((order) => !order.spicy)

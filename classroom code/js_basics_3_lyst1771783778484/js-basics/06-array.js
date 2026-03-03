@@ -2,8 +2,12 @@ const carriage1 = ["Veer", "Ayush", "Ravi"];
 const emptyCarriage = [];
 
 const threeEmptySeats = Array(3);
+console.log(threeEmptySeats);
+
 console.log(threeEmptySeats.length);
 const passenger = Array("Veer", "Ayush", "Ravi");
+console.log(passenger);
+
 
 const singlePassenger = Array.of(3);
 console.log(singlePassenger);
@@ -37,3 +41,6 @@ console.log(Array.isArray("Ravi"));
 // 4. Non Mutating: concat, slice, flat, flatmap [1, 2, 3, [5, 6]]
 // 5. Searching includes
 // 6. Array.isArray()
+const arr = [1,2,3,4,5,3,3]
+const result = arr.flatMap(num => num === 3 ? [9,9]:num)
+console.log(result);

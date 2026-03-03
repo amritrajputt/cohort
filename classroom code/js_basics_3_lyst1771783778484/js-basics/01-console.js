@@ -25,15 +25,15 @@ console.log("My log 2");
 console.log("My log 3");
 console.groupEnd();
 
-// console.time("time starts now");
+console.time("time starts now");
 
-// let dnaMatches = 0;
-// for (let i = 0; i < 1_000_000; i++) {
-//   dnaMatches++;
-// }
-// console.timeEnd();
+let dnaMatches = 0;
+for (let i = 0; i < 1_000_000; i++) {
+  dnaMatches++;
+}
+console.timeEnd("time starts now");
 
-console.log("Chaicode");
-console.log("Chaicode");
-console.log("Chaicode");
-console.log("Chaicode");
+// console.log("Chaicode");
+// console.log("Chaicode");
+// console.log("Chaicode");
+// console.log("Chaicode");

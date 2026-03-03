@@ -39,6 +39,8 @@ const spellCard = `
   | Spell: ${myDataValue} |
 
   `;
+  console.log(spellCard);
+  
 
 // const profile = `
 //   ${checker ? "true-value" : "false-value"}
@@ -49,6 +51,7 @@ const spellCard = `
 //
 
 console.log(void "hitesh");
+console.log(void "amrit");
 
 let generalStore = { name: "Kirana", goods: 2 };
 console.log(generalStore);
