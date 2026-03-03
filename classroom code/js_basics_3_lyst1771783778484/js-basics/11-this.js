@@ -1,81 +1,83 @@
-console.log(this);
+// console.log(this);
 
-function ranveerOnGlobalStage() {
-  return typeof this;
-}
+// function ranveerOnGlobalStage() {
+//   return typeof this;
+// }
 
-console.log(ranveerOnGlobalStage());
+// console.log(ranveerOnGlobalStage());
 
-function ranveerWithNoScript() {
-  return this;
-}
-console.log(ranveerWithNoScript());
+// function ranveerWithNoScript() {
+//   return this;
+// }
+// console.log(ranveerWithNoScript());
 
-const bollywoodFilm = {
-  name: "Bajirao Mastani",
-  lead: "Ranveer",
+// const bollywoodFilm = {
+//   name: "Bajirao Mastani",
+//   lead: "Ranveer",
 
-  introduce() {
-    return `${this.lead} performs in ${this.name}`;
-  },
-};
-const bollywoodFilm2 = {
-  name: "Dhurandhar",
-  lead: "Ranveer",
+//   introduce() {
+//     return `${this.lead} performs in ${this.name}`;
+//   },
+// };
 
-  introduce() {
-    return `${this.lead} performs in ${this.name}`;
-  },
-};
 
-console.log(bollywoodFilm.introduce());
-console.log(bollywoodFilm2.introduce());
+// const bollywoodFilm2 = {
+//   name: "Dhurandhar",
+//   lead: "Ranveer",
 
-const filmDirector = {
-  name: "Sanjay Leela Bhansali",
-  cast: ["Ranveer", "Deepika", "Priyanka"],
+//   introduce() {
+//     return `${this.lead} performs in ${this.name}`;
+//   },
+// };
 
-  announceCast() {
-    this.cast.forEach((actor) => {
-      console.log(`${this.name} introduces ${actor}`);
-    });
-  },
-};
+// console.log(bollywoodFilm.introduce());
+// console.log(bollywoodFilm2.introduce());
 
-filmDirector.announceCast();
+// const filmDirector = {
+//   name: "Sanjay Leela Bhansali",
+//   cast: ["Ranveer", "Deepika", "Priyanka"],
 
-const filmSet = {
-  crew: "Spot boys",
-  prepareProps() {
-    console.log(`Outer this.crew: ${this.crew}`);
+//   announceCast() {
+//     this.cast.forEach((actor) => {
+//       console.log(`${this.name} introduces ${actor}`);
+//     });
+//   },
+// };
 
-    function arrangeChairs() {
-      console.log(`Inner this.crew: ${this.crew}`);
-    }
-    arrangeChairs();
+// filmDirector.announceCast();
 
-    const arrangeLights = () => {
-      console.log(`Arrow this.crew: ${this.crew}`);
-    };
-    arrangeLights();
-  },
-};
+// const filmSet = {
+//   crew: "Spot boys",
+//   prepareProps() {
+//     console.log(`Outer this.crew: ${this.crew}`);
 
-filmSet.prepareProps();
+//     function arrangeChairs() {
+//       console.log(`Inner this.crew: ${this.crew}`);
+//     }
+//     arrangeChairs();
 
-// Detached Methods
-//
+//     const arrangeLights = () => {
+//       console.log(`Arrow this.crew: ${this.crew}`);
+//     };
+//     arrangeLights();
+//   },
+// };
 
-const actor = {
-  name: "Ranveer",
-  bow() {
-    return `${this.name} takes a bow`;
-  },
-};
-console.log(actor.bow());
-const detachedBow = actor.bow;
+// filmSet.prepareProps();
 
-console.log(detachedBow());
+// // Detached Methods
+// //
+
+// const actor = {
+//   name: "Ranveer",
+//   bow() {
+//     return `${this.name} takes a bow`;
+//   },
+// };
+// console.log(actor.bow());
+// const detachedBow = actor.bow;
+
+// console.log(detachedBow());
 
 const myfunctionOne = function () {
   console.log(this);

@@ -23,6 +23,7 @@ console.log(car2.status());
 //
 //
 function createAutoRickshaw(id, route) {
+  
   return {
     id,
     route,
@@ -32,7 +33,7 @@ function createAutoRickshaw(id, route) {
   };
 }
 
-const auto1 = createAutoRickshaw("UP-1", "Lucknow-kanpu");
+const auto1 = createAutoRickshaw("UP-1", "Lucknow-kanpur");
 const auto2 = createAutoRickshaw("UP-2", "Agra-Mathura");
 
 console.log(auto1.run());
