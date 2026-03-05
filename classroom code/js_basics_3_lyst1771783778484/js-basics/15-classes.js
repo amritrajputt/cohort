@@ -30,4 +30,5 @@ const somethingFromLastClass = debutant1.walkOut;
 const debutant2 = new Debutant("Yashasvi");
 console.log(debutant1.walkOut === debutant2.walkOut);
 
-// console.log(somethingFromLastClass());
+console.log(somethingFromLastClass());
+console.log(somethingFromLastClass());

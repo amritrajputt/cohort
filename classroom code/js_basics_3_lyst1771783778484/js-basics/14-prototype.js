@@ -13,6 +13,8 @@ raj.runBusiness = function () {
   return `${this.name} runs the family business`;
 };
 console.log(raj);
+console.log(raj.runBusiness());
+
 
 const ranbir = Object.create(raj);
 ranbir.name = "ranbir";
@@ -25,26 +27,26 @@ console.log(ranbir.makeFilm());
 console.log(ranbir.runBusiness());
 console.log(ranbir.cookTraditionalDish());
 
-Array.prototype.last = function () {
-  return this[this.length - 1];
-};
+// Array.prototype.last = function () {
+//   return this[this.length - 1];
+// };
 
-Array.prototype.hitesh = "hitesh"
+// Array.prototype.hitesh = "hitesh"
 
 
-console.log([1, 2, 3].hitesh)
+// console.log([1, 2, 3].hitesh)
 
-String.prototype.upperCase = function () {
+// String.prototype.upperCase = function () {
   
-}
+// }
 
-console.log([1, 2, 3].last());
-console.log(["Ani", "hitesh", "Akash"].last());
-
-
+// console.log([1, 2, 3].last());
+// console.log(["Ani", "hitesh", "Akash"].last());
 
 
 
-Array.prototype.mapTwo = function () {
-  this
-}
+
+
+// Array.prototype.mapTwo = function () {
+//   this
+// }

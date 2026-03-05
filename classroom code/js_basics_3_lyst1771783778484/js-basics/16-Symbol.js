@@ -1,27 +1,27 @@
-const aadhaar_of_mayur = Symbol("aadhaar");
-const aadhaar_of_piyush = Symbol("aadhaar");
+// const aadhaar_of_mayur = Symbol("aadhaar");
+// const aadhaar_of_piyush = Symbol("aadhaar");
 
-console.log(typeof aadhaar_of_mayur);
-console.log(aadhaar_of_mayur === aadhaar_of_piyush);
-console.log(aadhaar_of_mayur.toString());
-console.log(aadhaar_of_mayur.description);
+// console.log(typeof aadhaar_of_mayur);
+// console.log(aadhaar_of_mayur === aadhaar_of_piyush);
+// console.log(aadhaar_of_mayur.toString());
+// console.log(aadhaar_of_mayur.description);
 
-const nonIndian = Symbol();
-console.log(nonIndian.description);
+// const nonIndian = Symbol();
+// console.log(nonIndian.description);
 
-const biometricHash = Symbol("biometricHash");
-const bloodGroup = Symbol("bloodGroup");
+// const biometricHash = Symbol("biometricHash");
+// const bloodGroup = Symbol("bloodGroup");
 
-const citizenRecord = {
-  name: "Ved Pandey",
-  age: 21,
-  [biometricHash]: "a7yknfky788dn",
-  [bloodGroup]: "O+",
-};
+// const citizenRecord = {
+//   name: "Ved Pandey",
+//   age: 21,
+//   [biometricHash]: "a7yknfky788dn",
+//   [bloodGroup]: "O+",
+// };
 
-console.log(Object.keys(citizenRecord));
+// console.log(Object.keys(citizenRecord));
 
-console.log(Object.getOwnPropertySymbols(citizenRecord));
+// console.log(Object.getOwnPropertySymbols(citizenRecord));
 
 const rtiQueryBook = {
   queries: ["Infra budget", "Ration Card", "Education budget", "Startup laws"],
