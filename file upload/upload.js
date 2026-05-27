@@ -39,6 +39,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 
+
 // single is use for single file and we have to give feild name to image  for example in a personal detail the passport photo is a field and also signature is a field
 
 app.post("/uploadfile", upload.single("signature"), (req, res) => {
@@ -76,7 +77,7 @@ app.post("/uploadfiles", upload.fields([
     })
 })
 
-
+app.post("/avatar",upload.single("avatar"),uploadAvatar)
 
 
 const port = 3000
